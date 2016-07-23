@@ -36,17 +36,17 @@ L2:     ldy     #0
         tax
         cpx     #$0A            ; Check for \n
         bne     L3
-	brk
+		brk 
         .byt $10
 
         ldx     #$0D
 L3:     
 	brk
 	.byt $10
-        inc     ptr1
-        bne     L1
-        inc     ptr1+1
-        jmp     L1
+    inc     ptr1
+    bne     L1
+    inc     ptr1+1
+    jmp     L1
 
 ; No error, return count
 

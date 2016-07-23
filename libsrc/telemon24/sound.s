@@ -8,6 +8,9 @@
 
         .export         _shoot
 		.export         _zap
+		.export         _ping
+		.export         _explode		
+		.export         _oups		
 
 
         .include        "telemon24.inc"
@@ -26,3 +29,20 @@
 	rts
 .endproc
 
+.proc   _ping
+	brk
+    .byt $9d
+	rts
+.endproc
+
+.proc   _explode
+	brk
+    .byt $9c
+	rts
+.endproc
+
+.proc   _oups
+	brk
+    .byt $42
+	rts
+.endproc
